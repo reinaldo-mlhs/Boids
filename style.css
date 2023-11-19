@@ -1,0 +1,27 @@
+body{
+    overflow:hidden;
+  }
+  h5{
+    margin:0px;
+  }
+  #container{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  #canvas_div {
+    position:absolute;
+    text-align:center;
+  }
+  #options-div{
+    position:absolute;
+    display:flex;
+    flex-wrap: wrap;
+    width:480px;
+    padding-top:200px;
+    padding:20px;
+  }
+  .slider{
+    margin:5px;
+    height:2em;
+  }

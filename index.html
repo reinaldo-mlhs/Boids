@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
-    <script src="https://reinaldo-mlhs.github.io/QuadTree/QuadTree.js"></script>
-    <!-- <script type="module" src="./QuadTree.js"></script> -->
-    <script src="boids.js"></script>
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
 
-  </head>
-  <body>
-    <div id="container">
-        <div id="canvas_div">
-        </div>
-        <div id="options-div">
-          <div class="slider">
-            <h5>Align Strength: </h5>
-          <input type="range" min="0" max="100" value="10" class="slider" id="align-strength">
-          </div>
-          <div class="slider">
-          <h5>Cohesion Strength: </h5>
-          <input type="range" min="0" max="100" value="30" class="slider" id="cohesion-strength">
-          </div>
-          <div class="slider">
-          <h5>Separation Strength: </h5>
-          <input type="range" min="0" max="100" value="50" class="slider" id="separation-strength">
-          </div>
-          <div class="slider">
-            <h5>Align Range: </h5>
-          <input type="range" min="0" max="100" value="50" class="slider" id="align-range">
-          </div>
-          <div class="slider">
-          <h5>Cohesion Range: </h5>
-          <input type="range" min="0" max="100" value="50" class="slider" id="cohesion-range">
-          </div>
-          <div class="slider">
-          <h5>Separation Range: </h5>
-          <input type="range" min="0" max="100" value="25" class="slider" id="separation-range">
-          </div>
-        </div>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="https://pixijs.download/release/pixi.js"></script>
+
+  <script src="boids.js"></script>
+  <script src="utility.js"></script>
+
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="canvas_div">
+    </div>
+    <div id="options-div">
+      <div class="slider">
+        <h5>Population: </h5>
+        <input type="range" min="1" max="1500" value="250" class="slider" id="population">
       </div>
-      
-  </body>
-</html>
+      <div class="slider">
+        <h5>Align Strength: </h5>
+        <input type="range" min="0" max="100" value="10" class="slider" id="align-strength">
+      </div>
+      <div class="slider">
+        <h5>Cohesion Strength: </h5>
+        <input type="range" min="0" max="100" value="30" class="slider" id="cohesion-strength">
+      </div>
+      <div class="slider">
+        <h5>Separation Strength: </h5>
+        <input type="range" min="0" max="100" value="50" class="slider" id="separation-strength">
+      </div>
+      <div class="slider">
+        <h5>Simulation Accuracy: </h5>
+        <input type="range" min="1" max="300" value="50" class="slider" id="simulation-accuracy">
+      </div>
+      <div class="slider">
+        <h5>Align Range: </h5>
+        <input type="range" min="0" max="40" value="20" class="slider" id="align-range">
+      </div>
+      <div class="slider">
+        <h5>Cohesion Range: </h5>
+        <input type="range" min="0" max="40" value="40" class="slider" id="cohesion-range">
+      </div>
+      <div class="slider">
+        <h5>Separation Range: </h5>
+        <input type="range" min="0" max="40" value="20" class="slider" id="separation-range">
+      </div>
+    </div>
+  </div>
 
+</body>
+
+</html>

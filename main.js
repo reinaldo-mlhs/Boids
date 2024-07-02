@@ -1,7 +1,4 @@
-const app = new PIXI.Application({ width: innerWidth, height: innerHeight, background: '#1099bb' });
-
-const PixiDOMContainer = document.getElementById("canvas_div");
-PixiDOMContainer.appendChild(app.view);
+const app = new PIXI.Application();
 
 const options = {
     width: innerWidth,
@@ -15,6 +12,16 @@ const flock = new Flock(options);
 flock.makeBoids();
 controller.flock = flock;
 
-app.ticker.add((delta) => {
-    flock.update();
-});
+async function render() {
+    await app.init({ width: innerWidth, height: innerHeight, background: '#1099bb' })
+
+    const PixiDOMContainer = document.getElementById("canvas_div");
+    PixiDOMContainer.appendChild(app.canvas);
+
+    app.ticker.add((delta) => {
+        flock.update();
+    });
+}
+
+render();
+

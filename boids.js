@@ -186,7 +186,7 @@ class Boid {
         this.r = 3.0;
         this.acceleration = new Vector(0, 0)
         this.velocity = new Vector(Math.random(-1, 1), Math.random(-1, 1))
-        this.maxSpeed = 2;
+        this.maxSpeed = 4;
         this.maxForce = 0.05;
         this.point = new Vector(Math.random() * controller.width, Math.random() * controller.height)
 
